@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пешеходный переход</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="content">
+    <div class="traffic-light" id="trafficLight">
+      <div class="light active" id="red"></div>
+      <div class="light" id="yellow"></div>
+      <div class="light" id="green"></div>
+    </div>
+    <div class="zebra">
+      <div class="stripe white"></div>
+      <div class="stripe black"></div>
+      <div class="stripe white"></div>
+      <div class="stripe black"></div>
+      <div class="stripe white"></div>
+      <div class="stripe black"></div>
+    </div>
+    <button class="go-btn" id="goBtn">Идти</button>
+  </div>
+  <div class="container" id="modal">
+    <div class="modal">
+      <span class="close" id="closeBtn">&times;</span>
+      <h2>Выберите направление</h2>
+      <form id="directionForm">
+        <label>
+          <input type="radio" name="direction" value="up" checked>
+          Вверх
+        </label>
+        <label>
+          <input type="radio" name="direction" value="down">
+          Вниз
+        </label>
+        <button type="submit" class="submit-btn">Подтвердить</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
