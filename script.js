@@ -49,12 +49,8 @@ const crosswalk = {
 function changeTheLight(e) {
   const target = e.target;
   if (!target.classList.contains("light")) return;
+  document.querySelectorAll(".light").forEach(light => light.classList.remove("active"));
   target.classList.add("active");
-  if (target.previousElementSibling) {
-    target.previousElementSibling.classList.remove("active");
-  } else if (target.nextElementSibling) {
-    target.nextElementSibling.classList.remove("active");
-  }
 }
 
 trafficLight.addEventListener("click", changeTheLight);
